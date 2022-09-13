@@ -30,7 +30,7 @@ namespace CustomThread
                 Console.WriteLine($"Main Thread -- {i}");
             }
 
-            //t.Resume(); //-> afte the above loop has finished executing this line will execute
+            //t.Resume(); //-> afteR the above loop has finished executing this line will execute
 
             //-> scheduler decides which thread to execute first, not in our control
 
