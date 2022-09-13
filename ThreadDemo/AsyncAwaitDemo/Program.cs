@@ -16,11 +16,11 @@ namespace AsyncAwaitDemo
 
         }
 
-        public void PrintData()
+        public async Task PrintData()
         {
             int result = 5;
-            Task<int> t=GetData();
-            result = t.Result;  
+            result=await GetData();
+            //result = t.Result;  
             Console.WriteLine($"Retured Data is: {result}");
         }
 
