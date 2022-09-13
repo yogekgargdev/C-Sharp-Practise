@@ -24,7 +24,17 @@ namespace TPLDemo
             {
                 Console.WriteLine("USing lambda operators");
             });
+            Task<int> tg = new Task<int>(() =>
+            {
+                return 10;
 
+            });
+            tg.Start();
+            tg.Wait(); // we will wait for tg to complete otherwise tg.isCompleted is false
+            if(tg.IsCompleted)
+            {
+                Console.WriteLine($"Result : {tg.Result}");
+            }
             t2.Start();
             t.Start();
             t3.Start();
