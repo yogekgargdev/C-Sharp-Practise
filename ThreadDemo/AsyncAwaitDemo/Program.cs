@@ -26,6 +26,7 @@ namespace AsyncAwaitDemo
 
         public Task<int> GetData()
         {
+            Task.Delay(5000).Wait();
             return Task.FromResult(45);
         }
 
