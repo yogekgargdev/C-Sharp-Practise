@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SyncDemo
@@ -10,27 +11,33 @@ namespace SyncDemo
     {
         public int No1 { get; set; }
         public int No2 { get; set; }
+
+        public int Result { get; set; }
         public void Addition()
         {
-            var result=No1+ No2;
-            Console.WriteLine("Addition is: "+result);
+            Result=No1+ No2;
+            Thread.Sleep(1000);
+            Console.WriteLine("Addition is: "+ Result);
         }
         public void Subtraction()
         {
-            var result = No1 - No2;
-            Console.WriteLine("Subtraction is: " + result);
+            Result = No1 - No2;
+            Thread.Sleep(1000);
+            Console.WriteLine("Subtraction is: " + Result);
         }
 
         public void Division()
         {
-            var result = No1/No2;
-            Console.WriteLine("Division is: " + result);
+            Result = No1/No2;
+            Thread.Sleep(1000);
+            Console.WriteLine("Division is: " + Result);
         }
 
         public void Multiplacation()
         {
-            var result = No1 * No2;
-            Console.WriteLine("Multiplication is: " + result);
+            Result = No1 * No2;
+            Thread.Sleep(1000); //-> since the thread is halting in bw there is inconsistency, since all threads have a common variable
+            Console.WriteLine("Multiplication is: " + Result);
         }
 
     }
