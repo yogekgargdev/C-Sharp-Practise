@@ -5,53 +5,72 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
+
+
 namespace CustomThread
 {
     public class Program
     {
-        static void Main(string[] args)
-        {
-            Program p=new Program();
-            ThreadStart ts = new ThreadStart(p.DoTask); //--> its basically a delegate ->threadstart
-            //-> note there's no need to have a delegate, directly thread can be created and dotask can be called
-            Thread t = new Thread(ts); //-> Thread t = new Thread(p.doTask);
-            Thread t1 = new Thread(ts);
-            t.Name = "My Thread...";
-            t.Start();
-            
-
-            for (int i = 0; i < 10; i++)
-            {
-                if(i==5)
-                {
-                    t.Join(); //-> PLS HOVER OVER IT, WILL BLOCK CALLLING (MAIN THREAD) TILL THE TIME CUSTOM THREAD IS NOT EXECUTED
-                }    
-                Thread.Sleep(1000);
-                Console.WriteLine($"Main Thread -- {i}");
-            }
-
-            //t.Resume(); //-> afteR the above loop has finished executing this line will execute
-
-            //-> scheduler decides which thread to execute first, not in our control
-
-
-            Console.ReadKey();
-        }
-
         public void DoTask()
         {
-            Thread t = Thread.CurrentThread; //-> means dotask is executing on whatever thread the instance will come
-            Console.WriteLine($"Custom Thread Name {t.Name}");
-            for(int i = 0; i < 10; i++)
+            Thread t = Thread.CurrentThread;
+            Console.WriteLine(t.Name);
+            for (int i = 1; i <= 10; i++)
             {
-                if(i==6)
+
+                //if (i == 6)
+                //{
+                //    t.Join();
+                //    //t.Suspend();
+                //}
+                Thread.Sleep(1000);
+                Console.WriteLine($"Custom thread --{i}");
+            }
+        }
+        public void DoTask(object a)
+        {
+            int st = (int)a;
+            Thread t = Thread.CurrentThread;
+            Console.WriteLine(t.Name);
+            for (int i = 1; i <= st; i++)
+            {
+
+
+
+                //if (i == 6)
+                //{
+                //    t.Suspend();
+                //}
+                Thread.Sleep(1000);
+                Console.WriteLine($"Param Custom thread --{i}");
+            }
+        }
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            ThreadStart ts = new ThreadStart(p.DoTask);
+            Thread t = new Thread(ts);//Thread t = new Thread(p.DoTask);
+            Thread t1 = Thread.CurrentThread;
+            t.Name = "Main Thread";
+            t.Start();
+            for (int i = 1; i <= 10; i++)
+            {
+                if (i == 5)
                 {
-                    //t.Suspend();
+                    t.Join();//use to block thread
                 }
                 Thread.Sleep(1000);
-                Console.WriteLine($"Custom Thread -- {i}");
+                Console.WriteLine($"Main thread --{i}");
             }
+            //custom thread stop at i==6 and resume after completing main thread
+            //t.Resume();
 
+
+
+            ParameterizedThreadStart ps = new ParameterizedThreadStart(p.DoTask);
+            Thread t2 = new Thread(ps);//Thread t = new Thread(p.DoTask);
+            t2.Name = "Param Thread";
+            t2.Start(15);
         }
     }
 }
