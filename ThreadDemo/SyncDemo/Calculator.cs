@@ -15,29 +15,41 @@ namespace SyncDemo
         public int Result { get; set; }
         public void Addition()
         {
-            Result=No1+ No2;
-            Thread.Sleep(1000);
-            Console.WriteLine("Addition is: "+ Result);
+            lock (this)
+            {
+                Result = No1 + No2;
+                Thread.Sleep(1000);
+                Console.WriteLine("Addition is: " + Result);
+            }
         }
         public void Subtraction()
         {
-            Result = No1 - No2;
-            Thread.Sleep(1000);
-            Console.WriteLine("Subtraction is: " + Result);
+            lock (this)
+            {
+                Result = No1 - No2;
+                Thread.Sleep(1000);
+                Console.WriteLine("Subtraction is: " + Result);
+            }
         }
 
         public void Division()
         {
-            Result = No1/No2;
-            Thread.Sleep(1000);
-            Console.WriteLine("Division is: " + Result);
+            lock (this)
+            {
+                Result = No1 / No2;
+                Thread.Sleep(1000);
+                Console.WriteLine("Division is: " + Result);
+            }
         }
 
         public void Multiplacation()
         {
-            Result = No1 * No2;
-            Thread.Sleep(1000); //-> since the thread is halting in bw there is inconsistency, since all threads have a common variable
-            Console.WriteLine("Multiplication is: " + Result);
+            lock (this)
+            {
+                Result = No1 * No2;
+                Thread.Sleep(1000); //-> since the thread is halting in bw there is inconsistency, since all threads have a common variable
+                Console.WriteLine("Multiplication is: " + Result);
+            }
         }
 
     }
