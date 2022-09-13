@@ -12,8 +12,27 @@ namespace TPLDemo
         static void Main(string[] args)
         {
             Program p = new Program();
-            Task t = new Task(p.PerformTask);
+
+            Action act= new Action(p.PerformTask);
+            Task t = new Task(act); //-> above 2 lines works same as -- Task t = new Task(p.PerformTask);
+            Task t2 = new Task(delegate ()
+            {
+                Console.WriteLine("Anonymous Functions");
+            });
+
+            Task t3 = new Task(delegate ()
+            {
+                Console.WriteLine("USing lambda operators");
+            });
+
+            t2.Start();
             t.Start();
+            t3.Start();
+
+
+
+            //Task t = new Task(p.PerformTask); //-> here parameter is an action delegate
+            //t.Start();
             Console.Read();
         }
 
@@ -26,5 +45,6 @@ namespace TPLDemo
                 Console.WriteLine($"Task Value {i}");
             }
         }
+
     }
 }
