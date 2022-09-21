@@ -56,9 +56,9 @@ namespace EmployeeDbDemo
                 Console.WriteLine("------------------------------------------------------");
                 while(dr.Read())
                 {
-                    Console.WriteLine($"{dr.GetInt32(0)}\t{dr.GetString(1)}\t{dr.GetString(2)}\t{dr.GetString(3)}\t\t{dr.GetDouble(4)}"); 
-                    //-> 0 stands for 0th Collumn
-
+                    //Console.WriteLine($"{dr.GetInt32(0)}\t{dr.GetString(1)}\t{dr.GetString(2)}\t{dr.GetString(3)}\t\t{dr.GetDouble(4)}"); 
+                    //-> 0 stands for 0th Collumn, above thing is also valid
+                    Console.WriteLine($"{dr[0]}\t{dr[1]}\t{dr[2]}\t{dr[3]}\t\t{dr[4]}");
                 }
 
                 Console.WriteLine("------------------------------------------------------");
