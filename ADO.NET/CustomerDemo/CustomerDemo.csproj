@@ -49,6 +49,7 @@
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerCollection.cs" />
     <Compile Include="CustomerDB.cs" />
+    <Compile Include="CustomerSPDB.cs" />
     <Compile Include="CustomerStore.cs" />
     <Compile Include="CustomerView.cs" />
     <Compile Include="Program.cs" />

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerStoredProcDemo", "CustomerStoredProcDemo\CustomerStoredProcDemo.csproj", "{DF273D77-3374-4B95-B8D1-CE6B1C3B4AF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerDemo", "..\CustomerDemo\CustomerDemo.csproj", "{CFBF1673-BC9E-4BD3-82AB-F8D2D9DC1E29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C7CA93E9-2333-42E6-BD9C-15903F601F7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF273D77-3374-4B95-B8D1-CE6B1C3B4AF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF273D77-3374-4B95-B8D1-CE6B1C3B4AF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF273D77-3374-4B95-B8D1-CE6B1C3B4AF3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DF273D77-3374-4B95-B8D1-CE6B1C3B4AF3}.Debug|x86.Build.0 = Debug|Any CPU
+		{DF273D77-3374-4B95-B8D1-CE6B1C3B4AF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF273D77-3374-4B95-B8D1-CE6B1C3B4AF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF273D77-3374-4B95-B8D1-CE6B1C3B4AF3}.Release|x86.ActiveCfg = Release|Any CPU
+		{DF273D77-3374-4B95-B8D1-CE6B1C3B4AF3}.Release|x86.Build.0 = Release|Any CPU
+		{CFBF1673-BC9E-4BD3-82AB-F8D2D9DC1E29}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CFBF1673-BC9E-4BD3-82AB-F8D2D9DC1E29}.Debug|Any CPU.Build.0 = Debug|x86
+		{CFBF1673-BC9E-4BD3-82AB-F8D2D9DC1E29}.Debug|x86.ActiveCfg = Debug|x86
+		{CFBF1673-BC9E-4BD3-82AB-F8D2D9DC1E29}.Debug|x86.Build.0 = Debug|x86
+		{CFBF1673-BC9E-4BD3-82AB-F8D2D9DC1E29}.Release|Any CPU.ActiveCfg = Release|x86
+		{CFBF1673-BC9E-4BD3-82AB-F8D2D9DC1E29}.Release|Any CPU.Build.0 = Release|x86
+		{CFBF1673-BC9E-4BD3-82AB-F8D2D9DC1E29}.Release|x86.ActiveCfg = Release|x86
+		{CFBF1673-BC9E-4BD3-82AB-F8D2D9DC1E29}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {695B5D89-DB5D-4023-A97D-FF8F6298FD5D}
+	EndGlobalSection
+EndGlobal

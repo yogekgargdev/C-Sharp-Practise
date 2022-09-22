@@ -12,13 +12,15 @@ namespace View
     {
         Customer c;
         //CustomerCollection cl;
-        CustomerDB cl;
+        // CustomerDB cl;
+        CustomerSPDB cl;
         CustomerStore cStore;
 
 
         public CustomerView() {
              cStore = new CustomerStore();
-             cl = new CustomerDB();
+             //cl = new CustomerDB();
+             cl=new CustomerSPDB();
             //cl = new CustomerCollection();
         }
 
@@ -37,8 +39,8 @@ namespace View
         public void AddCustomerView() {
             int id;
             string name, gender, address, mobile;
-            id = cl.GenerateID();
-            Console.WriteLine("New Customer ID\t\t:\t{0}", id);
+            //id = cl.GenerateID();
+            //Console.WriteLine("New Customer ID\t\t:\t{0}", id);
             Console.Write("Please Enter Customer Name\t:\t");
             name = Console.ReadLine();
             Console.Write("Please Enter Customer Gender\t:\t");
@@ -49,7 +51,7 @@ namespace View
             mobile = Console.ReadLine();
 
             c = new Customer { 
-                CID = id,
+                //CID = id,
                 CNAME = name,
                 CGENDER = gender,
                 ADDRESS = address,
@@ -81,11 +83,14 @@ namespace View
                 MOBILE = mobile
             };
             //Console.WriteLine(cl.UpdateCustomer(id, c));
+            /*
             if (cl.UpdateCustomer(id, c)) {
                 Console.WriteLine("Customer Updated Sucessfully.....");
             } else {
                 Console.WriteLine("Customer not found to Update.......");
             }
+            */
+            Console.WriteLine(cl.UpdateCustomer(id, c));
         }
 
         public void FindCustomerView() {
@@ -112,6 +117,7 @@ namespace View
             Console.Write("Please Enter Customer ID\t:\t");
             id = int.Parse(Console.ReadLine());
             //Console.WriteLine(cl.DeleteCustomer(id));
+            /*
             if (cl.DeleteCustomer(id))
             {
                 Console.WriteLine("Customer Deleted Successfully...........");
@@ -120,13 +126,17 @@ namespace View
             {
                 Console.WriteLine("Customer not found to delete.......");
             }
+            */
+            Console.WriteLine(cl.DeleteCustomer(id));
+
         }
 
         public void CustomerSummaryView() {
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine("ID\tName\tGender\tAddress\tMobile");
             Console.WriteLine("-------------------------------------------------------");
-            foreach (Customer c in cl.GetCustomers()) {
+            List<Customer> lcst = cl.GetCustomers();
+            foreach (Customer c in lcst) {
                 Console.WriteLine(c.CID+"\t"+c.CNAME+"\t"+c.CGENDER+"\t"+c.ADDRESS+"\t"+c.MOBILE);
             }
             Console.WriteLine("-------------------------------------------------------");
