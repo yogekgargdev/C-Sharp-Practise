@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. CSS and Xpath", "04. CS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoSuchElementException", "NoSuchElementException\NoSuchElementException.csproj", "{4D3DAC68-7021-4D42-A93D-374AC29BF915}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Text Input Field", "05. Text Input Field\05. Text Input Field.csproj", "{376F6187-B13C-4C69-8A05-74EC08C9BA37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4D3DAC68-7021-4D42-A93D-374AC29BF915}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D3DAC68-7021-4D42-A93D-374AC29BF915}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D3DAC68-7021-4D42-A93D-374AC29BF915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{376F6187-B13C-4C69-8A05-74EC08C9BA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{376F6187-B13C-4C69-8A05-74EC08C9BA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{376F6187-B13C-4C69-8A05-74EC08C9BA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{376F6187-B13C-4C69-8A05-74EC08C9BA37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
