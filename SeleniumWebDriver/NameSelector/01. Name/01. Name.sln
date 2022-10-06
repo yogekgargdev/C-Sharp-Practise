@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Check Box Selection", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Radio Button Selection", "Radio Button Selection\Radio Button Selection.csproj", "{EF4F0AEE-C698-4694-A1EF-10D30EB80E03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drop Down Selection", "Drop Down Selection\Drop Down Selection.csproj", "{29CB3E01-FCA2-4025-BD4D-2BADBC6D8D29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{EF4F0AEE-C698-4694-A1EF-10D30EB80E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF4F0AEE-C698-4694-A1EF-10D30EB80E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF4F0AEE-C698-4694-A1EF-10D30EB80E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29CB3E01-FCA2-4025-BD4D-2BADBC6D8D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29CB3E01-FCA2-4025-BD4D-2BADBC6D8D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29CB3E01-FCA2-4025-BD4D-2BADBC6D8D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29CB3E01-FCA2-4025-BD4D-2BADBC6D8D29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
