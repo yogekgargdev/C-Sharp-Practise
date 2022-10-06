@@ -20,6 +20,8 @@ class EntryPoint
 
         }
 
+        driver.Quit();
+
 
     }
 
