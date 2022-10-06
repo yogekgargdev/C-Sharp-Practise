@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoSuchElementException", "N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Text Input Field", "05. Text Input Field\05. Text Input Field.csproj", "{376F6187-B13C-4C69-8A05-74EC08C9BA37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Check Box Selection", "06. Check Box Selection\06. Check Box Selection.csproj", "{17E8085E-9998-4201-915C-B5A9C5D4780F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{376F6187-B13C-4C69-8A05-74EC08C9BA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{376F6187-B13C-4C69-8A05-74EC08C9BA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{376F6187-B13C-4C69-8A05-74EC08C9BA37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17E8085E-9998-4201-915C-B5A9C5D4780F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17E8085E-9998-4201-915C-B5A9C5D4780F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17E8085E-9998-4201-915C-B5A9C5D4780F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17E8085E-9998-4201-915C-B5A9C5D4780F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
